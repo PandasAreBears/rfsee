@@ -7,6 +7,9 @@ import gzip
 import graphviz
 import click
 from enum import Enum
+from importlib.resources import files
+
+DEFAULT_RFC_INDEX = files("rfsee") / "rfc-index.xml.gz"
 
 NAMESPACES = {"": "https://www.rfc-editor.org/rfc-index"}
 
@@ -35,8 +38,6 @@ def extract_rfc_num(ref: str) -> StandardIdentifier:
 
     assert False, f"Unknown standard identifier {ref}"
 
-
-DEFAULT_RFC_INDEX = Path(__file__).parent / "rfc-index.xml.gz"
 
 
 @click.command()
