@@ -1,6 +1,6 @@
 [project]
 name = "rfsee"
-version = "1.0.0"
+version = "1.0.1"
 description = "Visualize a chain of RFC documents"
 readme = "README.md"
 license = "GPL-3.0-or-later"
@@ -10,6 +10,9 @@ dependencies = [
     "lxml",
     "click",
 ]
+
+[project.urls]
+Repository = "https://github.com/PandasAreBears/rfsee"
 
 [build-system]
 requires = ["setuptools>=61.0"]
